@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import Link from "next/link"
 import { Menu, X, Rocket } from 'lucide-react'
+import Image from "next/image"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,10 +55,13 @@ export default function Navbar() {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <Rocket className="text-white w-8 h-8" />
-            <span className="text-xl font-bold text-white tracking-wider">
-              CosmoScape
-            </span>
+           <Image
+              src="/logo.png"
+              alt="Cosmos Logo"
+              width={100}
+              height={100}
+            />
+
           </Link>
 
           {/* Desktop Navigation */}

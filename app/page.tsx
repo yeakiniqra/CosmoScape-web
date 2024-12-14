@@ -4,9 +4,13 @@ import { motion } from "framer-motion";
 import { Rocket, Star, Eclipse, Camera } from "lucide-react";
 import { FeatureCard } from "@/components/cards/FeatureCard";
 import { BackgroundVideo } from "@/components/layout/BackgroundVideo";
+import { SmoothScrollHero } from "@/components/landing/SmoothScroll";
+import FuzzyOverlayExample from "@/components/landing/Overlay";
+import Footer from "@/components/landing/Footer";
 
 export default function Home() {
   return (
+    <>
     <main className="relative min-h-screen bg-black overflow-hidden pt-20">
       <BackgroundVideo />
 
@@ -56,7 +60,14 @@ export default function Home() {
           />
         </div>
       </div>
-
+      
+      
     </main>
+    {/* Smooth Scroll */}
+    <SmoothScrollHero />
+    {/* Fuzzy Overlay */}
+    <FuzzyOverlayExample />
+    <Footer />
+    </>
   );
 }
